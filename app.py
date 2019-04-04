@@ -7,7 +7,7 @@ from os import listdir, mkdir, environ
 from mimetypes import guess_type
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, supports_credentials=True)
 token = environ.get("AUTH_TOKEN")
 
 proj_dir = dirname(realpath(__file__))
