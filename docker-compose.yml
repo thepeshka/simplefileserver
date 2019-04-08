@@ -12,6 +12,7 @@ services:
       - files:/var/www/files
     env_file:
       - .env
+    restart: always
 
 volumes:
   files:
